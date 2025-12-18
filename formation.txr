@@ -16,29 +16,17 @@ Table de temps:
 TableTemps =  
 
 ADDCOLUMNS ( 
-
     CALENDAR (DATE(2015,1,1), DATE(2030,12,31)), 
-
     "Année", YEAR([Date]), 
-
     "Trimestre", "T" & FORMAT([Date], "Q"), 
-
     "Mois", FORMAT([Date], "MMMM"), 
-
     "Numéro du Mois", MONTH([Date]), 
-
     "Année-Mois", FORMAT([Date], "YYYY-MM"), 
-
     "Jour", DAY([Date]), 
-
     "Jour Semaine", FORMAT([Date], "dddd"), 
-
     "Numéro Jour Semaine", WEEKDAY([Date], 2),  -- 2 = Lundi comme premier jour 
-
     "Semaine ISO", WEEKNUM([Date], 21),          -- 21 = ISO (lundi = 1, première semaine complète) 
-
     "Est Week-End", IF(WEEKDAY([Date], 2) >= 6, TRUE, FALSE) 
-
 ) 
 
 
